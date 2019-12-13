@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TargetEndpoint name="default">
+    <Description/>
+    <PreFlow name="PreFlow">
+        <Response>
+            <Step>
+                <Condition>proxy.pathsuffix == "/xml"</Condition>
+                <Name>JSON-to-XML-1</Name>
+            </Step>
+        </Response>
+        <Request/>
+    </PreFlow>
+    <Flows/>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+    <HTTPTargetConnection>
+        <URL>https://api.usergrid.com/onlinedinesh/sandbox/roles</URL>
+    </HTTPTargetConnection>
+</TargetEndpoint>
